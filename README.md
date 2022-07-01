@@ -8,7 +8,7 @@ This is a basic random password generator using HTML, CSS, and JS. You are able 
 ![alt text](https://carlose3595.github.io/Develop\assets\images\password-generator-snapshot.png)
 <br />
 
-Develop\assets\images\password-generator-snapshot.png
+
 ## Built With
 * HTML
 * CSS
