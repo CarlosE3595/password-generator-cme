@@ -15,7 +15,8 @@ function getRandomItem(list) {
 }
 
 
-
+// This will be used to prompt the user on how they would like their password generated
+// and run the function to return a random password to the users specifications
 
 function generatePassword() {
 
@@ -38,12 +39,13 @@ function generatePassword() {
   var userWantsNumbers = window.confirm("Would you like to include numbers into your password?");
   var userWantsSymbols = window.confirm("Would you like to include symbols into your password?");
 
+  // These the array lists of all possible characters that can be picked at random for password
   var numberList = ["1","2","3","4","5","6","7","8","9"]
   var symbolList = ["!","@","#","$","%","^","&","*","(",")","-","=","_","+","[","]","{","}","|",";",":","'",",",".","/","<",">","?"]
   var lowercaseLettersList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
   var uppercaseLettersList = []
   var optionscart = []
-
+  // This is the loop that will pick out the arrays above depending on whichever of the four promts the user chose ealier 
   for (var i = 0; i < lowercaseLettersList.length; i++) {
     uppercaseLettersList[i] = lowercaseLettersList[i].toUpperCase()
   }
@@ -64,6 +66,7 @@ function generatePassword() {
     optionscart.push(lowercaseLettersList)
   }
 
+  // loop that will generate a random character picking process from all array lists picked by user
   var generatedPassword = ""
   for (var i = 0; i < passwordLength; i++) { 
     var randomList = getRandomItem(optionscart)
@@ -74,9 +77,6 @@ function generatePassword() {
   
   return generatedPassword
  }
-
-
-
 
 
 
